@@ -2,8 +2,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 50%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #777;
 }
 
@@ -14,33 +14,48 @@
 
   &__header {
       background-color: #ddd;
+      display: flex;
+      flex-direction: row;
   }
 
   &__header-title-container {
+    overflow: hidden;
   }
 
   &__header-title {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__header-button {
+    text-wrap: nowrap;
   }
 
   &__content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
   }
 
   &__content-block {
       &_left {
           width: 30%;
+          height: auto;
           border-right: 1px solid #ccc;
       }
 
       &_right {
+          overflow: auto;
           width: 70%;
       }
   }
 
   &__footer {
       background-color: #ddd;
+      text-align: center;
+      word-wrap: break-word;
   }
 }
 
